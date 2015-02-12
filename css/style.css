@@ -1,12 +1,12 @@
 
 body {
-  	background-image: url("webtreats-1.png");
+  	/*background-image: url("webtreats-1.png");*/
   	/*background-image: url("upup.png");*/
 	margin: 0px;
-	color: #fff;
+	color: #111;
 	background-size: cover;
 	background-attachment: fixed;
-	background-color: rgba(51, 43, 43, 1);
+	background-color: white;
 
 }
 
@@ -16,46 +16,50 @@ p {
 
 .header { /*Powered by bootstrap*/
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
   display: inline-block;
   width: 100%;
   padding: 0px;
 
-  font-size: 71px;
-  font-family: Garamond;
-
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  /*background-color: rgba(6, 118, 124, 1);*/
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: #14b8b2; /*rgba(6, 118, 124, 1);*/
+  /*background-color: rgba(0, 0, 0, 0.65);*/
   text-align: center;
 }
 
 .content {
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
 	padding-top: 3%;
 	padding-bottom: 3%;
 	margin-bottom: 5%;
 	display: inline-block;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.65);
+	/*background-color: rgba(0, 0, 0, 0.65);*/
+	background-color: white;
 }
 
 .projectcell {
 	/*background-image: url("webtreats-1.png");*/
+	text-align: center;
+	padding-bottom: 3%;
 }
 
-.projectcell h1 {
-	font-size: 80;
+.links {
+	text-align: center;
+	padding-right: 40%;
+	padding-left: 40%;
+	padding-bottom: 5%;
 }
 
-.projectsExpand {
-	z-index: 4;
-}
-
-.arrowDown {
-	float: right;
-	padding: 10px;
+@media (max-width: 1000px ) {
+	
+	.links {
+		text-align: center;
+		padding-right: 20%;
+		padding-left: 20%;
+		padding-bottom: 1%;
+	}
 }
