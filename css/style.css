@@ -7,15 +7,16 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: white;
+	color: #555353;
 
 }
 
 p {
-	font-size: 12px;
+	font-size: 15px;
 }
 
 .header { /*Powered by bootstrap*/
-  margin-top: 5%;
+  margin-top: 7%;
   margin-bottom: 1%;
   display: inline-block;
   width: 100%;
@@ -37,14 +38,20 @@ p {
 	margin-bottom: 5%;
 	display: inline-block;
 	width: 100%;
+	text-align: center;
 	/*background-color: rgba(0, 0, 0, 0.65);*/
 	background-color: white;
+}
+
+.content h2 {
+	font-family: "Courier New", Courier, monospace;
 }
 
 .projectcell {
 	/*background-image: url("webtreats-1.png");*/
 	text-align: center;
-	padding-bottom: 3%;
+	padding-bottom: 2%;
+	padding-top: 2%;
 }
 
 .links {
@@ -54,12 +61,28 @@ p {
 	padding-bottom: 5%;
 }
 
+.projects {
+	border-top: solid 3px #14b8b2;
+}
+
+.about {
+	text-align: center;
+}
+
 @media (max-width: 1000px ) {
 	
 	.links {
 		text-align: center;
+		margin-top: 3%;
 		padding-right: 20%;
 		padding-left: 20%;
 		padding-bottom: 1%;
+	}
+
+	.about {
+		padding-top: 3%;
+		padding-right: 10%;
+		padding-left: 10%;
+		text-align: center;
 	}
 }
