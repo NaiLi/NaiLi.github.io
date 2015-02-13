@@ -7,9 +7,6 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery.com/ui/1.11.1/jquery-ui.js"></script>
-		<script src="script/angular.js"></script>
-		<script src="script/script.js"></script>
 		<link rel="image_src" href="images/linnea.png" />
 	</head>
 
@@ -23,7 +20,7 @@
 								<!--<img src="images/klas-blw-opac.png" height="240">-->
 			</div>
 
-			<div class="row links">
+			<div class="row contactlinks">
 				<div class="col-xs-3">
 					<a href="https://github.com/NaiLi" target="_blank">
 						<img src="images/GitHub-Mark-120px-plus.png" width="100%"/>
@@ -48,12 +45,13 @@
 
 			<!-- Presentation -->
 			<div class="content about">
-				<p>Jag heter Linnéa Nåbo och studerar till civilingenjör inom Medieteknik vid Linköpings universitet, campus Norrköping. Här kan du läsa om olika projekt jag deltagit i och en del om mina andra engagemang.
+				<p>Jag heter Linnéa Nåbo och studerar till civilingenjör inom 
+					<a href="http://www.liu.se/utbildning/program/medieteknik?l=sv" target="_blank">Medieteknik</a> vid Linköpings universitet, campus Norrköping. Här kan du läsa om olika projekt jag deltagit i och en del om mina andra engagemang.
 				<br/>Fråga gärna om det är något mer du vill veta om mig!</p>
 			</div>
 
-			<!--
-			<div class="row links">
+<!--			
+			<div class="row contactlinks" id="nav">
 				<div class="col-xs-4">
 					<a href="#projekt">
 						Projekt
@@ -69,8 +67,8 @@
 						Uppdrag
 					</a>
 				</div>
-			</div>-->
-
+			</div>
+-->
 			<!-- Start of projects -->
 			<div class="content" id="projects">
 				
@@ -90,21 +88,23 @@
 					<div class="col-sm-4 projectcell">
 						<img src="images/qr-small.png" height="180"/>
 						<h3>Läsning av QR-kod</h3>
-						<p>Under hösten 2014 hackade jag tillsammans med tre andra i ihop en QR-läsarei Matlab. Funktionen får in en bild tagen med kamera på en QR-kod och därefter behandlas bilden med hänsyn till att bilden kan vara tagen i olika vinklar och i olika belysning och analyseras.
+						<p>Under hösten 2014 hackade jag tillsammans med tre andra i ihop en QR-läsare i Matlab. Funktionen får in en bild tagen med kamera på en QR-kod och därefter behandlas bilden med hänsyn till att bilden kan vara tagen i olika vinklar och i olika belysning och analyseras.
 <br/>Kunskapsutveckling: Matlab, bildanalys, bildbehandling</p>
 						</br>								
 					</div>			
 					<div class="col-sm-4 projectcell">
 						<img src="images/matt-small.png" height="180"/>
 						<h3>mätt!</h3>
-						<p>Under helghacket East Sweden Hack skapade jag tillsammans med tre andra, en webbapplikation som visar regionens restauranger och det resultat de fått på senaste livsmedelskontroll, utifrån öppen data från Linköpings kommun. På så vis kan alla ta del av resultaten samt dela med sig av sin restaurangupplevelse genom att recensera restauranger. Under 22 timmar skapades en mobile first teknisk applikationsdemo med fokus på användbarhet och lekfullhet. 
+						<p>Under helghacket 
+							<a href="http://eastswedenhack.se/tavlingsbidrag-2014" target="_blank">
+							East Sweden Hack</a> skapade jag tillsammans med tre andra, en webbapplikation som visar regionens restauranger och det resultat de fått på senaste livsmedelskontroll, utifrån öppen data från Linköpings kommun. På så vis kan alla ta del av resultaten samt dela med sig av sin restaurangupplevelse genom att recensera restauranger. Under 22 timmar skapades en mobile first teknisk applikationsdemo med fokus på användbarhet och lekfullhet. 
 <br/>Kunskapsutveckling: webbutveckling, angular.js, Bootstrap, XML, API:er</p>
 						</br>								
 					</div>		
 					<div class="col-sm-4 projectcell">
 						<img src="images/vint-small.png" height="180"/>
 						<h3>Vint androidapplikation</h3>
-						<p>Under sommaren 2014 arbetade jag som summer intern på Vint i Stockholm. Vint är ett företag som med sin app kopplar samman personliga tränare med sina klienter. Fokus ligger på att med små grupper och enkel bokning hjälpa alla att nå sina personliga träninsmål. 
+						<p>Under sommaren 2014 arbetade jag som summer intern på <a href="https://www.joinvint.com/" target="_blank">Vint i Stockholm</a>. Vint är ett företag som med sin app kopplar samman personliga tränare med sina klienter. Fokus ligger på att med små grupper och enkel bokning hjälpa alla att nå sina personliga träninsmål. 
 Då jag kom till Vint fanns endast applikationen till iOS. Jag arbetade då tillsammans med en till på en Androidversion av appen och efter fem veckor gav vi ut den första betaversionen och innan sommaren var slut fanns appen på Google play. 
 Jag arbetade i huvudsak med frontend.
 <br/>Kunskapsutveckling: Androidprogrammering, API:er, jSON, att arbeta på ett startup-företag</p>
@@ -113,7 +113,9 @@ Jag arbetade i huvudsak med frontend.
 					<div class="col-sm-4 projectcell">
 						<img src="images/schemalaggning-small.png" height="180"/>
 						<h3>Schemaläggning i publika miljöer, kandidatexamensarbete</h3>
-						<p>Som kandidatprojekt arbetade jag i en projektgrupp om sex personer med att ta fram en schemaläggningsapplikation för personal på Visualiseringscenter C i Norrköping. Problematiken bestod i att något digitalt verktyg för schemaläggning inte användes och att personalen ifråga bestod av både heltidsanställda och extrapersonal. 
+						<p>Som kandidatprojekt arbetade jag i en projektgrupp om sex personer med att ta fram en schemaläggningsapplikation för personal på 
+							<a href="http://visualiseringscenter.se/" target="_blank">
+							Visualiseringscenter C</a> i Norrköping. Problematiken bestod i att något digitalt verktyg för schemaläggning inte användes och att personalen ifråga bestod av både heltidsanställda och extrapersonal. 
 Som lösning togs en webbapplikation fram som gav möjlighet för administratör att schemalägga och personal att se schema för kommande vecka. 
 I gruppen använde vi oss av den agila arbetsmetoden Scrum. Min huvudsyssla var att arbeta med den vy som skulle visa schemaläggningen. 
 <br/>Kunskapsutveckling: webbprogrammering, databashantering, jSON, Scrum, Git</p>
@@ -149,7 +151,7 @@ Mitt arbete låg i huvudsak i att ta fram den fysikaliska modellen för stenens 
 	 					<img src="images/netlight-small.png" height="180"/>
 	 					<h3>Next9</h3>
 	 					<h4>Våren 2015</h4>
-	 					<p>Under våren 2015 är jag en av de 9 adepterna i mentorprogrammet Next9, drivet av konsultfirman Netlight. Under våren kommer jag att, tillsammans med min mentor, arbeta med personliga mål och personlig utveckling. I mentorprogrammet ingår även ett flertal tematräffar med övriga mentorer och adepter.</p>
+	 					<p>Under våren 2015 är jag en av de 9 adepterna i mentorprogrammet <a href="https://www.netlight.com/wp-content/uploads/2014/10/Next9_sv_2015.pdf" target="_blank">Next9</a>, drivet av konsultfirman Netlight. Under våren kommer jag att, tillsammans med min mentor, arbeta med personliga mål och personlig utveckling. I mentorprogrammet ingår även ett flertal tematräffar med övriga mentorer och adepter.</p>
 	 				</div>
 	 				<div class="happeningcell">
 	 					<img src="images/netlight-small.png" height="180"/>
@@ -178,7 +180,7 @@ Mitt arbete låg i huvudsak i att ta fram den fysikaliska modellen för stenens 
 	 					<img src="images/mtd-small.png" height="180"/>
 	 					<h3>Koordinator Medieteknikdagarna 2014</h3>
 	 					<h4>2013-2014</h4>
-	 					<p>MTD, Medieteknikdagarna är ett två-dagars ideellt evenemang för och av studenter på Medieteknikprogrammet. Min roll var att organisera värdar och gruppbesök på mässan.</p>
+	 					<p>MTD, <a href="http://www.medieteknikdagarna.se/" target="_blank">Medieteknikdagarna</a> är ett två-dagars ideellt evenemang för och av studenter på Medieteknikprogrammet. Min roll var att organisera värdar och gruppbesök på mässan.</p>
 	 				</div>
 	 				<div class="happeningcell">
 	 					<img src="images/mette-small.png" height="180"/>
@@ -192,14 +194,14 @@ Mitt arbete låg i huvudsak i att ta fram den fysikaliska modellen för stenens 
 	 					<h3>Ordförande Medietekniksektionen</h3>
 	 					<h4>2012-2013</h4>
 	 					<p>
-	 						Medietekniksektionen arrangerar en mängd aktiviteter för studenter på Medieteknikprogrammet, alltifrån fester och pubar till kursutvärderingar och företagsbesök.</p>
+	 						<a href="http://medieteknik.nu/se/" target="blank">Medietekniksektionen </a>arrangerar en mängd aktiviteter för studenter på Medieteknikprogrammet, alltifrån fester och pubar till kursutvärderingar och företagsbesök.</p>
 	 				</div>
 	 				<div class="happeningcell">
 	 					<img src="images/ahead-small.png" height="180"/>
 	 					<h3>Mattecoach aHead Mattecoachning</h3>
 	 					<h4>2012-2014</h4>
 	 					<p>
-	 						Som mattementor hjälpte jag studenter från gymnasiet med deras mattestudier och inspirerade genom att visa exempel på tillämpad matematik.</p>
+	 						Som mattementor på <a href="http://www.aheadcoachning.se/" target="blank">aHead</a> hjälpte jag studenter från gymnasiet med deras mattestudier och inspirerade genom att visa exempel på tillämpad matematik.</p>
 	 				</div>
 				</div>
 			</div>
@@ -207,7 +209,7 @@ Mitt arbete låg i huvudsak i att ta fram den fysikaliska modellen för stenens 
 
 	<div class="footer">
 
-		<div class="row links" style="padding-bottom:3px;">
+		<div class="row contactlinks" style="padding-bottom:3px;">
 			<div class="col-xs-3">
 				<a href="https://github.com/NaiLi" target="_blank">
 					<img src="images/GitHub-Mark-120px-plus.png" width="100%"/>

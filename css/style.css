@@ -4,7 +4,7 @@ body {
   	/*background-image: url("upup.png");*/
 	margin: 0px;
 	color: #111;
-	background-size: cover;
+	/*background-size: cover;*/
 	background-attachment: fixed;
 	background-color: white;
 	color: #555353;
@@ -13,6 +13,20 @@ body {
 
 p {
 	font-size: 15px;
+}
+
+a:link {
+	color: #14b8b2;
+}
+a:visited {
+	color: #14b8b2;	
+}
+a:hover {
+	color: #14b894;
+	text-decoration: none;
+}
+a:active {
+	color: #fff;
 }
 
 .header { /*Powered by bootstrap*/
@@ -64,7 +78,7 @@ p {
 	padding-bottom: 2%;
 }
 
-.links {
+.contactlinks {
 	text-align: center;
 	padding-right: 40%;
 	padding-left: 40%;
