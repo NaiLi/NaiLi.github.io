@@ -1,252 +1,73 @@
 <!DOCTYPE html>
 <html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linnea 40 år</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-overtitle">Inbjudan</p>
+      <h1>Linnéa 40 år</h1>
+      <p class="hero-subtitle">Välkommen att fira med mig!</p>
+    </div>
+  </header>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<link rel="image_src" href="images/linnea.png" />
-	</head>
+  <main>
+    <section class="info">
+      <h2>🎉 Festinformation</h2>
+      <p><strong>Datum:</strong> TBD</p>
+      <p><strong>Plats:</strong> TBD</p>
+      <p>Festen hålls på en plats där det även finns möjlighet att bo över.</p>
+    </section>
 
-	<body>
-	<div class="container-fluid">
+    <section class="program">
+      <h2>📅 Program</h2>
+      <ul>
+        <li><strong>16.00</strong> – Ankomst &amp; välkomstdrink</li>
+        <li><strong>18.00</strong> – Middag</li>
+        <li><strong>20.00</strong> – Fest &amp; musik</li>
+        <li><strong>09.00</strong> – Frukost för alla som stannar över</li>
+      </ul>
+    </section>
 
-			<div class="header">
+    <section class="boende">
+      <h2>🛏️ Boende</h2>
+      <p>Boende finns att boka på plats. Mer information om rum, pris och bokning kommer i samband med OSA.</p>
+    </section>
 
-				<img src="images/linnea.png" width="60%"/>
-								<!--<img src="images/klas-blw-opac.png" height="240">-->
-			</div>
+    <section class="osa">
+      <h2>✉️ OSA</h2>
+      <p>Vänligen svara senast: <strong>TBD</strong></p>
+      <p>
+        Svara via e-post:
+        <a href="mailto:exempel@mail.com">exempel@mail.com</a>
+        <br />
+        eller SMS: <strong>070-000 00 00</strong>
+      </p>
+    </section>
+  </main>
 
-			<div class="row contactlinks">
-				<div class="col-xs-3">
-					<a href="https://github.com/NaiLi" target="_blank">
-						<img src="images/GitHub-Mark-120px-plus.png" width="100%"/>
-					</a>
-				</div>
-				<div class="col-xs-3">
-					<a href="https://www.linkedin.com/in/linneanabo" target="_blank">
-						<img src="images/In-Black-75px-TM.png" width="100%"/>
-					</a>
-				</div>
-				<div class="col-xs-3">
-					<a href="https://twitter.com/LinneaNabo" target="_blank">
-						<img src="images/twitter-4096-black.png" width="100%"/>
-					</a>
-				</div>
-				<div class="col-xs-3">
-					<a href="mailto:linnea.nabo@gmail.com">
-						<img src="images/letter.png" width="100%"/>
-					</a>
-				</div>
-			</div>
+  <footer>
+    <p>Ser fram emot att fira med dig! 🎶✨</p>
+  </footer>
 
-			<!-- Presentation -->
-			<div class="content about">
-				<p>Jag heter Linnéa Nåbo och studerar till civilingenjör inom 
-					<a href="http://www.liu.se/utbildning/program/medieteknik?l=sv" target="_blank">Medieteknik</a> vid Linköpings universitet, campus Norrköping. Här kan du läsa om olika projekt jag deltagit i och en del om mina andra engagemang.
-				<br/>Fråga gärna om det är något mer du vill veta om mig!</p>
-			</div>
+  <script>
+    // Fade-in på scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
 
-<!--			
-			<div class="row contactlinks" id="nav">
-				<div class="col-xs-4">
-					<a href="#projekt">
-						Projekt
-					</a>
-				</div>
-				<div class="col-xs-4">
-					<a href="#engagemang">
-						Engagemang
-					</a>
-				</div>
-				<div class="col-xs-4">
-					<a href="#uppdrag">
-						Uppdrag
-					</a>
-				</div>
-			</div>
--->
-			<!-- Start of projects -->
-			<div class="content" id="projects">
-				
-				<h2>Projekt</h2>
-					<!-- First row 
-					<div class = "projects">-->
-				<div class="row innerContent">
-					<div class="col-sm-4 projectcell">
-						<img src="images/eventify-small.png" height="180"/>
-						<h3>Eventify</h3>
-						<p>I projektet Eventify gjorde jag tillsammans med en studiekamrat en eventplaneringsapplikation i kursen Dokumentstrukturer. Uppdraget var att skapa en sida som genom formulär hanterade tillägg och ändring av data i en databas. Datan hämtades som XML och hanterades med olika XSLT-dokument beroende på plattform.
-						
-						<br/>Kunskapsutveckling: webbprogrammering, php, mySql, XML, XSLT
-						</p>
-						</br>								
-					</div>	
-					<div class="col-sm-4 projectcell">
-						<img src="images/qr-small.png" height="180"/>
-						<h3>Läsning av QR-kod</h3>
-						<p>Under hösten 2014 hackade jag tillsammans med tre andra i ihop en QR-läsare i Matlab. Funktionen får in en bild tagen med kamera på en QR-kod och därefter behandlas bilden med hänsyn till att bilden kan vara tagen i olika vinklar och i olika belysning varefter den analyseras.
-<br/>Kunskapsutveckling: Matlab, bildanalys, bildbehandling</p>
-						</br>								
-					</div>			
-					<div class="col-sm-4 projectcell">
-						<img src="images/matt-small.png" height="180"/>
-						<h3>mätt!</h3>
-						<p>Under helghacket 
-							<a href="http://eastswedenhack.se/tavlingsbidrag-2014" target="_blank">
-							East Sweden Hack</a> skapade jag tillsammans med tre andra studenter, en webbapplikation som visar regionens restauranger och det resultat de fått på sina senaste livsmedelskontroller, utifrån öppen data från Linköpings kommun. På så vis kan alla ta del av resultaten samt dela med sig av sina restaurangupplevelser genom att recensera restauranger. Under 22 timmar skapades en mobile first teknisk applikationsdemo med fokus på användbarhet och lekfullhet. 
-<br/>Kunskapsutveckling: webbutveckling, angular.js, Bootstrap, XML, API:er</p>
-						</br>								
-					</div>		
-					<div class="col-sm-4 projectcell">
-						<img src="images/vint-small.png" height="180"/>
-						<h3>Vint androidapplikation</h3>
-						<p>Under sommaren 2014 arbetade jag som summer intern på <a href="https://www.joinvint.com/" target="_blank">Vint i Stockholm</a>. Vint är ett företag som med sin app kopplar samman personliga tränare med sina klienter. Fokus ligger på att med små grupper och enkel bokning hjälpa alla att nå sina personliga träningsmål. 
-Då jag kom till Vint fanns endast applikationen till iOS. Jag arbetade då tillsammans med en kollega på en Androidversion av appen och efter fem veckor gav vi ut den första betaversionen och innan sommaren var slut fanns appen på Google play. 
-Jag arbetade i huvudsak med frontend.
-<br/>Kunskapsutveckling: Androidprogrammering, API:er, jSON, att arbeta på ett startup-företag</p>
-						</br>								
-					</div>	
-					<div class="col-sm-4 projectcell">
-						<img src="images/schemalaggning-small.png" height="180"/>
-						<h3>Schemaläggning i publika miljöer, kandidatexamensarbete</h3>
-						<p>Som kandidatprojekt arbetade jag i en projektgrupp om sex personer med att ta fram en schemaläggningsapplikation för personal på 
-							<a href="http://visualiseringscenter.se/" target="_blank">
-							Visualiseringscenter C</a> i Norrköping. Problematiken bestod i att något digitalt verktyg för schemaläggning inte användes och att personalen ifråga bestod av både heltidsanställda och extrapersonal. 
-Som lösning togs en webbapplikation fram som gav möjlighet för administratör att schemalägga och personal att se schema för kommande vecka. 
-I gruppen använde vi oss av den agila arbetsmetoden Scrum. Min huvudsyssla var att arbeta med den vy som skulle visa schemaläggningen. 
-<br/>Kunskapsutveckling: webbprogrammering, databashantering, jSON, Scrum, Git</p>
-						</br>								
-					</div>	
-					<div class="col-sm-4 projectcell">
-						<img src="images/spacecurling-small.png" height="180"/>
-						<h3>Space Curling</h3>
-						<p>I kursen modellbygge och simulering gjorde jag i en projektgrupp tillsammans med fyra andra en simulering av ett curlingspel. 
-
-							Initialt togs den fysikaliska modellen fram för hur en curlingsten rör sig över isen och hur den påverkas av delfriktioner. 
-
-							Beräkningarna utfördes i Matlab. Därefter skapade vi spelet i javascript och webGL. I spelet kan två personer spela mot varandra. För varje sten anges utgångshastighet och vinkel för stenen. Spelet hanterar även multipla krockar mellan stenar. 
-Mitt arbete låg i huvudsak i att ta fram den fysikaliska modellen för stenens svängande rörelse samt översätta detta till javascript och webGL.
-<br/>Kunskapsutveckling: Javascript, webGL, Matlab</p>
-						</br>								
-					</div>
-				</div>
-
-			</div>
-			<!-- End of projects -->
-
-			<!-- Start engagemang -->
- 			<div class="content" id="engagemang">
- 					
-				<h2>Engagemang</h2>
- 				
- 				<div class="innerContent">
-	 				<div class="happeningcell">
-	 					<img src="images/teknikinspra-small.png" height="180"/>
-	 					<h3>Inspirationsföreläsning Teknikinspra</h3>
-	 					<h4>Januari 2015</h4>
-	 					<p>I slutet av januari höll jag tillsammans med en medstudent
-	 						en inspirationsföreläsning för högstadietjejer. Evenemanget arrangerades av två studenter på teknikprogrammet på gymnasiet med syfte att inspirera unga tjejer att våga läsa en teknisk utbidning på gymnasiet. 
-
-	 						I vår inspirationsföreläsning lade vi fokus på att våga tro att man inte är mer unik än att man klarar det andra klarar av och även på hur viktigt det är att våga gå sin egen väg i valet av utbildning.</p>
-	 				</div>
-	 				<div class="happeningcell">
-	 					<img src="images/netlight-small.png" height="180"/>
-	 					<h3>Next9</h3>
-	 					<h4>Våren 2015</h4>
-	 					<p>Under våren 2015 är jag en av de 9 adepterna i mentorprogrammet <a href="https://www.netlight.com/wp-content/uploads/2014/10/Next9_sv_2015.pdf" target="_blank">Next9</a>, drivet av konsultfirman Netlight. Under våren kommer jag, tillsammans med min mentor, arbeta med personliga mål och personlig utveckling. I mentorprogrammet ingår även ett flertal tematräffar med övriga mentorer och adepter.</p>
-	 				</div>
-	 				<div class="happeningcell">
-	 					<img src="images/netlight-small.png" height="180"/>
-	 					<h3>Företagsbesök med tjejföreningen Mette</h3>
-	 					<h4>November 2014</h4>
-	 					<p>Under hösten var jag initiativtagare till ett företagsbesök på konsultfirman Netlight, som tjejer på Medieteknikprogrammet i Norrköping var inbjudna till. Syftet var att ge IT-tjejer som studerar i Norrköping chansen att ta del av evenemang som arrangeras i Stockholm och därmed inte är helt enkla att närvara vid. Genom att tillsammans med Netlight styra ihop en helkväll som i slutänden blev tillgänglig både för medieteknikstudenter och studenter från Uppsala universitet fick alla ta del av en inspirerande kväll och möjlighet att mingla med både Netlight och andra studenter.</p>
-	 				</div>
-	 				<div class="happeningcell">
-	 					<img src="images/nordicjs-small.png" height="180"/>
-	 					<h3>Funktionär på Nordic.js</h3>
-	 					<h4>September 2014</h4>
-	 					<p>Nordic.js är en konferens för javascript-utvecklare som 2014 arrangerades för första gången. Under konferensen var jag med i det fantastiska team av funktionärer som arbetade på plats. Jag var under konferensen värd för talare som var på konferensen. Att vara med på Nordic.js var en av de mest inspirerande saker jag har gjort. Att även träffa talare som Sergi Mansilla, Douglas Crockford och Ellen Sundh var något som gav mig både energi och inspiration.</p>
-	 				</div>
-
-	 				<div class="happeningcell">
-	 					<img src="images/liu-small.png" height="180"/>
-	 					<h3>Studentambassadör och studentbloggare</h3>
-	 					<h4>2013-2014</h4>
-	 					<p>Som studentbloggare har mitt uppdrag varit att inspirera potentiella studenter att söka sig vidare till universitetet och ge information kring vad det innebär att plugga på Linköpings universitet och i synnerhet Medieteknikprogrammet. Mitt fokus blev att försöka sänka det trappsteg som många kan känna inför att börja plugga. Jag försökte även återspegla den vardag som jag har haft på universitetet.<br/><br/>
-	 					Jag har även vid tre tillfällen varit med i Linköpings universitets monter på olika gymnasiemässor och där försökt vägleda besökare till vilka utbildningar som kan passa just dem.</p>
-	 				</div>
- 				</div>
- 			</div>
- 			<!-- Slut engagemang -->
-
- 			<!-- Start förtroendeuppdrag -->
-			<div class="content" id="uppdrag">
- 					
-				<h2>Förtroendeuppdrag</h2>
- 				
- 				<div class="innerContent">
-	 				<div class="happeningcell">
-	 					<img src="images/mtd-small.png" height="180"/>
-	 					<h3>Koordinator Medieteknikdagarna 2014</h3>
-	 					<h4>2013-2014</h4>
-	 					<p>MTD, <a href="http://www.medieteknikdagarna.se/" target="_blank">Medieteknikdagarna</a> är ett två-dagars ideellt evenemang för och av studenter på Medieteknikprogrammet. Min roll var att organisera värdar och gruppbesök på mässan.</p>
-	 				</div>
-	 				<div class="happeningcell">
-	 					<img src="images/mette-small.png" height="180"/>
-	 					<h3>Sekreterare Medietekniksektionens tjejförening Mette</h3>
-	 					<h4>2013-2014</h4>
-	 					<p>
-	 						Medietekniksektionens tjejförening Mette har som uppdrag att arbeta för jämställdhet och skapa en god studiemiljö för tjejer. Föreningen arbetar genom att arrangera olika evenemang och företagsbesök.</p>
-	 				</div>
-	 				<div class="happeningcell">
-	 					<img src="images/mt-small.png" height="180"/>
-	 					<h3>Ordförande Medietekniksektionen</h3>
-	 					<h4>2012-2013</h4>
-	 					<p>
-	 						<a href="http://medieteknik.nu/se/" target="blank">Medietekniksektionen </a>arrangerar en mängd aktiviteter för studenter på Medieteknikprogrammet, alltifrån fester och pubar till kursutvärderingar och företagsbesök.</p>
-	 				</div>
-	 				<div class="happeningcell">
-	 					<img src="images/ahead-small.png" height="180"/>
-	 					<h3>Mattecoach aHead Mattecoachning</h3>
-	 					<h4>2012-2014</h4>
-	 					<p>
-	 						Som mattementor på <a href="http://www.aheadcoachning.se/" target="blank">aHead</a> hjälpte jag studenter från gymnasiet med deras mattestudier och inspirerade dem genom att visa exempel på tillämpad matematik.</p>
-	 				</div>
-				</div>
-			</div>
-
-
-	<div class="footer">
-
-		<div class="row contactlinks" style="padding-bottom:3px;">
-			<div class="col-xs-3">
-				<a href="https://github.com/NaiLi" target="_blank">
-					<img src="images/GitHub-Mark-120px-plus.png" width="100%"/>
-				</a>
-			</div>
-			<div class="col-xs-3">
-				<a href="https://www.linkedin.com/in/linneanabo" target="_blank">
-					<img src="images/In-Black-75px-TM.png" width="100%"/>
-				</a>
-			</div>
-			<div class="col-xs-3">
-				<a href="https://twitter.com/LinneaNabo" target="_blank">
-					<img src="images/twitter-4096-black.png" width="100%"/>
-				</a>
-			</div>
-			<div class="col-xs-3">
-				<a href="mailto:linnea.nabo@gmail.com">
-					<img src="images/letter.png" width="100%"/>
-				</a>
-			</div>
-			</div>
-
-		<p>All rights reserved &#169; Linnéa Nåbo</p>
-		<p>linnea.nabo@gmail.com</p>
-	</div>
-	</div>
-	</body>
+    document.querySelectorAll('header.hero, main section, footer').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
 </html>
