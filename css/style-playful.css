@@ -7,7 +7,7 @@
   --accent-blue: #101572;
   --accent-yellow: #ffd86b;
   --text-main: #1f1230;
-  --text-muted: #5b4b6a;
+  --text-muted: #d6c0eb;
   --bubble-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   --candle-width: 24px;
   --candle-height: 60px;
@@ -129,7 +129,7 @@ body {
 
 .p-portrait img {
   display: block;
-  max-width: 260px;
+  max-width: 200px;
   width: 100%;
   border-radius: 35px;
   box-shadow: var(--bubble-shadow);
@@ -331,16 +331,17 @@ a:hover {
 /* === LJUS === */
 
   /* Countdown box - valfri */
-  .countdown {
-    padding: 20px;
-    margin: 24px;
+  .countdownText {
+    position: fixed;
+    top: 70px;
+    right: 50px;
+    padding: 7px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     background: white;
     max-width: 360px;
   }
-  .countdown h1{ margin: 0 0 8px 0; font-size:1.1rem;}
-  .countdown .days{ font-size:2rem; font-weight:600; margin-top:6px; }
+  .countdownText .days{ font-size:0.8rem; font-weight:600; margin-top:6px; }
 
   /* Candles container fixed to right side */
   .candles {

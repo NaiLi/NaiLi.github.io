@@ -29,7 +29,7 @@
     animateBubble();
 
 //   const targetDate = "2026-03-07";
-  const targetDate = "2025-11-29";
+  const targetDate = "2026-12-03";
 
   /* Skapa 40 ljus */
   const total = 40;
@@ -97,7 +97,7 @@
     const diffDays = Math.round((t1 - t0) / msPerDay);
 
     if (diffDays > 0){
-      daysLeftEl.textContent = diffDays + " dag" + (diffDays===1 ? "" : "ar");
+      daysLeftEl.textContent = diffDays + " dag" + (diffDays===1 ? "" : "ar") + " kvar! 🎂";
       // Fram till födelsedagen: 39 tända, sista släckt
     //   setLitCandles(39, false);
     } else if (diffDays === 0) {

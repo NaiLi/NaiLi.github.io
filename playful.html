@@ -10,13 +10,12 @@
   <header class="p-header">
     <div class="p-title">
       <h1>Linnéa 40 år 🎈</h1>
-      <p>Det blir lekfullt, knasigt och fantastiskt roligt!</p>
+      <p>Hoppas du vill komma och fira med mig!</p>
     </div>
 
     <div class="p-portrait">
       <img id="portrait" src="img/clown.png" alt="Linnéa med clownnäsa" />
     </div>
-    <div id="countdownText">Dagar kvar: <span class="days" id="daysLeft">—</span></div>
   </header>
 
   <main class="p-content">
@@ -41,15 +40,20 @@
       <p>SMS: 070-000 00 00</p>
     </section>
 
-    <section id="osa">
-      <h2>OSA senast 15 januari</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4yZz6X_Tden0fkLvkqcxHpR0wbCxucK4AguP4gpgvykT_Xg/viewform?embedded=true" width="640" height="1101" frameborder="0" marginheight="0" marginwidth="0">Läser in …</iframe>
-    </section>
-
+    <div style="display:flex;">
+      <div id="osa">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4yZz6X_Tden0fkLvkqcxHpR0wbCxucK4AguP4gpgvykT_Xg/viewform?embedded=true" width="500" height="1101" frameborder="0" marginheight="0" marginwidth="0">Läser in …</iframe>
+      </div>
+      
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841839.184627076!2d14.555770670509423!3d57.93421135508867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46598ed04f638d49%3A0xedb757450cf9b33c!2sSolviken%20vid%20Sommen!5e0!3m2!1ssv!2sse!4v1764336378869!5m2!1ssv!2sse" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
 
   </main>
 
   <div class="scroll-bubble"></div>
+  <div class="countdownText"><span class="days" id="daysLeft">—</span></div>
   <div class="candles" aria-hidden="false" id="candlesContainer">
     <!-- 40 ljus genereras av JS -->
   </div>
