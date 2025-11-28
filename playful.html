@@ -14,8 +14,9 @@
     </div>
 
     <div class="p-portrait">
-      <img id="portrait" src="img/playful.png" alt="Linnéa med clownnäsa" />
+      <img id="portrait" src="img/clown.png" alt="Linnéa med clownnäsa" />
     </div>
+    <div id="countdownText">Dagar kvar: <span class="days" id="daysLeft">—</span></div>
   </header>
 
   <main class="p-content">
@@ -49,41 +50,15 @@
   </main>
 
   <div class="scroll-bubble"></div>
+  <div class="candles" aria-hidden="false" id="candlesContainer">
+    <!-- 40 ljus genereras av JS -->
+  </div>
 
   <footer class="p-footer">
     <p>🎪 Förbered dig på skratt, glitter och magi! 🎪</p>
   </footer>
 
-  <script>
-    // Blink-animation på hover
-    const img = document.getElementById('portrait');
-    img.addEventListener('mouseover', () => img.src = 'img/clown-blink.png');
-    img.addEventListener('mouseout', () => img.src = 'img/clown.png');
+<script type="text/javascript" src="script/script-playfull.js"></script>
 
-    const b = document.querySelector('.scroll-bubble');
-
-    function animateBubble() {
-      const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
-      const t = window.scrollY / scrollMax; // 0 → 1 beroende på scroll
-
-      // Parabel: y = -(x-1)^2 + 1 (normaliserad 0→1)
-      const px = t;                   // x-progress
-      const parabola = -((px - 1)**2) + 1;
-
-      // Position på skärmen (du kan justera dessa)
-      const xPos = 110 - px * 70;     // 90% → 20% på X-axeln
-      const yPos = 10 + parabola * 40; // 10% → 50% höjd
-
-      // Fade ut mot slutet
-      const opacity = Math.max(0, 1 - t * 1.2);
-
-      b.style.transform = `translate(${xPos}vw, ${yPos}vh)`;
-      b.style.opacity = opacity;
-    }
-
-    window.addEventListener('scroll', animateBubble);
-    animateBubble();
-
-  </script>
 </body>
 </html>
