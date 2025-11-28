@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linnea 40 år – Alternativ 1</title>
+  <link rel="stylesheet" href="css/style-classy.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-overtitle">Inbjudan</p>
+      <h1>Linnéa 40 år</h1>
+      <p class="hero-subtitle">Välkommen att fira med mig!</p>
+    </div>
+  </header>
+
+  <main>
+    <nav class="back-nav">
+      <a href="index.html">&larr; Tillbaka till startsidan med alternativ</a>
+    </nav>
+
+    <section class="info">
+      <h2>🎉 Festinformation</h2>
+      <p><strong>Datum:</strong> TBD</p>
+      <p><strong>Plats:</strong> TBD</p>
+      <p>Festen hålls på en plats där det även finns möjlighet att bo över.</p>
+    </section>
+
+    <section class="program">
+      <h2>📅 Program</h2>
+      <ul>
+        <li><strong>16.00</strong> – Ankomst &amp; välkomstdrink</li>
+        <li><strong>18.00</strong> – Middag</li>
+        <li><strong>20.00</strong> – Fest &amp; musik</li>
+        <li><strong>09.00</strong> – Frukost för alla som stannar över</li>
+      </ul>
+    </section>
+
+    <section class="boende">
+      <h2>🛏️ Boende</h2>
+      <p>Boende finns att boka på plats. Mer information om rum, pris och bokning kommer i samband med OSA.</p>
+    </section>
+
+    <section class="osa">
+      <h2>✉️ OSA</h2>
+      <p>Vänligen svara senast: <strong>TBD</strong></p>
+      <p>
+        Svara via e-post:
+        <a href="mailto:exempel@mail.com">exempel@mail.com</a>
+        <br />
+        eller SMS: <strong>070-000 00 00</strong>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ser fram emot att fira med dig! 🎶✨</p>
+  </footer>
+
+  <script>
+    // Fade-in på scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('header.hero, main section, footer, nav.back-nav').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

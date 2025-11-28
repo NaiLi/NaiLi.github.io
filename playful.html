@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linnéa 40 år – Playful</title>
+  <link rel="stylesheet" href="css/style-playful.css" />
+</head>
+<body>
+  <header class="p-header">
+    <div class="p-title">
+      <h1>Linnéa 40 år 🎈</h1>
+      <p>Det blir lekfullt, knasigt och fantastiskt roligt!</p>
+    </div>
+
+    <div class="p-portrait">
+      <img id="portrait" src="img/playful.png" alt="Linnéa med clownnäsa" />
+    </div>
+  </header>
+
+  <main class="p-content">
+    <section class="bubble bubble-info">
+      <h2>🎉 När & var?</h2>
+      <p>DAG & PLATS (TBD)</p>
+    </section>
+
+    <section class="bubble bubble-program">
+      <h2>📅 Program</h2>
+      <ul>
+        <li>16.00 – Välkomstmingel & bubblor</li>
+        <li>18.00 – Lekfull middag</li>
+        <li>20.00 – Fest & överraskningar</li>
+      </ul>
+    </section>
+
+    <section class="bubble bubble-osa">
+      <h2>✉️ OSA</h2>
+      <p>Datum: TBD</p>
+      <p>Mail: exempel@mail.com</p>
+      <p>SMS: 070-000 00 00</p>
+    </section>
+
+    <section id="osa">
+      <h2>OSA senast 15 januari</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4yZz6X_Tden0fkLvkqcxHpR0wbCxucK4AguP4gpgvykT_Xg/viewform?embedded=true" width="640" height="1101" frameborder="0" marginheight="0" marginwidth="0">Läser in …</iframe>
+    </section>
+
+
+  </main>
+
+  <div class="scroll-bubble"></div>
+
+  <footer class="p-footer">
+    <p>🎪 Förbered dig på skratt, glitter och magi! 🎪</p>
+  </footer>
+
+  <script>
+    // Blink-animation på hover
+    const img = document.getElementById('portrait');
+    img.addEventListener('mouseover', () => img.src = 'img/clown-blink.png');
+    img.addEventListener('mouseout', () => img.src = 'img/clown.png');
+
+    const b = document.querySelector('.scroll-bubble');
+
+    function animateBubble() {
+      const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+      const t = window.scrollY / scrollMax; // 0 → 1 beroende på scroll
+
+      // Parabel: y = -(x-1)^2 + 1 (normaliserad 0→1)
+      const px = t;                   // x-progress
+      const parabola = -((px - 1)**2) + 1;
+
+      // Position på skärmen (du kan justera dessa)
+      const xPos = 110 - px * 70;     // 90% → 20% på X-axeln
+      const yPos = 10 + parabola * 40; // 10% → 50% höjd
+
+      // Fade ut mot slutet
+      const opacity = Math.max(0, 1 - t * 1.2);
+
+      b.style.transform = `translate(${xPos}vw, ${yPos}vh)`;
+      b.style.opacity = opacity;
+    }
+
+    window.addEventListener('scroll', animateBubble);
+    animateBubble();
+
+  </script>
+</body>
+</html>

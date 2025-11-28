@@ -3,59 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Linnea 40 år</title>
+  <title>Linnéas 40-årsfest – designval</title>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Om du senare vill ha en enklare, separat stil för startsidan kan du byta ut filen här -->
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
       <p class="hero-overtitle">Inbjudan</p>
-      <h1>Linnéa 40 år</h1>
-      <p class="hero-subtitle">Välkommen att fira med mig!</p>
+      <h1>WIP</h1>
+      <p class="hero-subtitle">Välj vilket inbjudningsförslag du vill jobba vidare med</p>
     </div>
   </header>
 
-  <main>
-    <section class="info">
-      <h2>🎉 Festinformation</h2>
-      <p><strong>Datum:</strong> TBD</p>
-      <p><strong>Plats:</strong> TBD</p>
-      <p>Festen hålls på en plats där det även finns möjlighet att bo över.</p>
-    </section>
+  <main class="alt-chooser">
+    <section>
+      <h2>Välj design</h2>
+      <p>Här kan du testa olika varianter av inbjudan innan du bestämmer dig.</p>
 
-    <section class="program">
-      <h2>📅 Program</h2>
-      <ul>
-        <li><strong>16.00</strong> – Ankomst &amp; välkomstdrink</li>
-        <li><strong>18.00</strong> – Middag</li>
-        <li><strong>20.00</strong> – Fest &amp; musik</li>
-        <li><strong>09.00</strong> – Frukost för alla som stannar över</li>
-      </ul>
-    </section>
+      <div class="alt-grid">
+        <!-- Alternativ 1 -->
+        <article class="alt-card">
+          <h3>Alternativ 1 – Klassisk inbjudan</h3>
+          <p>
+            Svart och guldig med glitter som rör sig långsamt i bakgrunden. 
+            En tydlig sida med festinfo, program, boende och OSA. </p>
+          <a class="button" href="classy.html">Öppna alternativ 1</a>
+        </article>
 
-    <section class="boende">
-      <h2>🛏️ Boende</h2>
-      <p>Boende finns att boka på plats. Mer information om rum, pris och bokning kommer i samband med OSA.</p>
-    </section>
-
-    <section class="osa">
-      <h2>✉️ OSA</h2>
-      <p>Vänligen svara senast: <strong>TBD</strong></p>
-      <p>
-        Svara via e-post:
-        <a href="mailto:exempel@mail.com">exempel@mail.com</a>
-        <br />
-        eller SMS: <strong>070-000 00 00</strong>
-      </p>
+        <!-- Alternativ 2 -->
+        <article class="alt-card">
+          <h3>Alternativ 2 – Lekfull</h3>
+          <p>Lite mer skojig, men framför allt med en blinkande clown!</p>
+          <a class="button" href="playful.html">Öppna alternativ 2</a>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Ser fram emot att fira med dig! 🎶✨</p>
+    <p>Experimentera lugnt – du behöver inte bestämma dig än 🎈</p>
   </footer>
 
   <script>
-    // Fade-in på scroll
+    // Enkel fade-in som du redan hade
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -64,7 +55,7 @@
       });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll('header.hero, main section, footer').forEach(el => {
+    document.querySelectorAll('header.hero, main, footer').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });
