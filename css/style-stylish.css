@@ -8,17 +8,11 @@
   --accent-yellow: #ffd86b;
   --text-main: #1f1230;
   --text-muted: #d6c0eb;
-  --bubble-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  --candle-width: 24px;
-  --candle-height: 60px;
   --gap: 12px;
-  --flame-size: 18px;
-  --wax-color: #fff7e6;
-  --wick-color: #3b3b3b;
-  --flame-top: #ffd26a;
-  --flame-bottom: #ff8c3b;
   --unlit-opacity: 0.14;
 }
+
+* { box-sizing: border-box; }
 
 *,
 *::before,
@@ -48,7 +42,7 @@ body {
 
 .p-header {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   align-items: center;
   justify-content: center;
   max-width: 1100px;
@@ -60,6 +54,7 @@ body {
 
 .p-header-text {
   text-align: right;
+  min-width: 150px;
 }
 
 .p-header-text h1 {
@@ -80,34 +75,33 @@ body {
 /* === MAIN-INNEHÅLL === */
 
 .content {
-  /* max-width: 1200px; */
-  display: flex;
-  flex-direction: row;
-  padding: 0 1.5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
 }
 
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  justify-content: center;
-  max-width: 900px;
-  /* margin: 60px auto; */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
 }
 
 /* Basstil */
 .info-card {
-  position: relative;
-  padding: 28px 32px;
-  border-radius: 16px;
+  position: relative;   /* viktigt för ::before/::after */
+  overflow: hidden;     /* klipper bort pseudo-element som går utanför */
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   background: rgba(10, 14, 22, 0.7);
   backdrop-filter: blur(8px);
+  transition: transform .25s ease, box-shadow .25s ease;
   color: #e8ecf7;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: transform .25s ease, box-shadow .25s ease;
-  overflow: hidden;
+  gap: 10px;
 }
 
 /* --- LUXE --- */
@@ -189,11 +183,56 @@ body {
   line-height: 1.45;
 }
 
-/* Mobil */
+/* OSA-formuläret ska ligga under korten på small screens */
+#osa {
+  margin-top: 12px; /* kan justeras */
+}
+
+/* Responsiv iframe-behållare (16:9) — ändra padding-top för annan ratio */
+.iframe-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 110%; /* google form är ofta lång; 110% gör den högre. Sänk till 56.25% för 16:9 */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.iframe-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Skydda media-element från att växa över viewport */
+/* img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+
+/* Små skärmar — finjusteringar */
+@media (max-width: 900px) {
+  .content { padding: 16px; }
+  .icon { font-size: 26px; }
+}
+/* Mobil 
 @media (max-width: 680px) {
   .info-grid {
     grid-template-columns: 1fr;
   }
+}*/
+
+@media (max-width: 600px) {
+  .content { padding: 12px; gap: 12px; }
+  .info-card { padding: 14px; }
+  .icon { font-size: 24px; }
+  /* Se till att korten blir en kolumn (grid med minmax gör ofta det automatiskt, men detta ser till att allt blir stacked) */
+  .info-grid { grid-template-columns: 1fr; }
+  /* Om du vill att OSA-formuläret ska vara efter korten och inte bredvid */
+  #osa { width: 100%; margin-left: 0; }
 }
 
 
@@ -232,63 +271,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/* === LJUS === */
-
-  /* Countdown box - valfri */
-  .countdownText {
-    position: fixed;
-    top: 70px;
-    right: 50px;
-    padding: 7px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    background: white;
-    max-width: 360px;
-  }
-  .countdownText .days{ font-size:0.8rem; font-weight:600; margin-top:6px; color: #1f1230;}
-
-/* === RESPONSIVITET === */
-
-@media (max-width: 900px) {
-  .p-header {
-    grid-template-columns: minmax(0, 1fr);
-    text-align: center;
-  }
-
-  .p-title::after {
-    margin-left: 0;
-  }
-
-  .p-portrait img {
-    transform: rotate(0deg);
-  }
-
-  .p-content {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.4rem;
-  }
-
-  .bubble-info,
-  .bubble-program,
-  .bubble-osa {
-    transform: rotate(0deg);
-  }
-}
-
-@media (max-width: 600px) {
-  .p-header {
-    margin-top: 1.5rem;
-    padding-inline: 1rem;
-  }
-
-  .p-content {
-    padding-inline: 1rem;
-  }
-
-  .bubble {
-    border-radius: 22px;
-    padding: 1rem 1.1rem 1.2rem;
-  }
 }
