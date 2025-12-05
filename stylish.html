@@ -8,6 +8,13 @@
 </head>
 <body>
 
+  <!-- STJÄRNHIMMEL (container skapar två lager) -->
+  <div class="sky" aria-hidden="true">
+    <div class="stars-layer back" id="stars-back"></div>
+    <div class="stars-layer front" id="stars-front"></div>
+  </div>
+
+
   <div class="p-header">
     <div class="p-header-text">
       <p class="p-overtitle">INBJUDAN 40-årsfest</p>
@@ -33,13 +40,12 @@
         <p>
           Vi laddar för en riktig pangfest, men på vägen finns det lite praktisk info att ha koll på.
           </br>
-          Festen håller till på Solviken i närheten av Tranås 7-8 mars. Hit tar man sig med bil eller med tåg till Tranås 
-          (så hjälps vi åt att lösa transport till slutdestinationen).
+          Festen håller till på Solviken i närheten av Tranås 7-8 mars.
 
           </br>
           Festen drar igång kl 16:30 med en fördrink och sen blir det middag och dans!
           För den som vill går det även att komma tidigare. Vi grillar på korv och sätter på bastun redan runt 12.00.
-          För den som åker lite längre går det även att komma redan på fredag kväll, men då står man för eget boende och mat. 
+          För den som åker lite längre går det även att komma redan på fredag kväll. 
           </br>
           </br>
 
@@ -52,7 +58,7 @@
           Under middagen kommer det att finnas både tid och utrymme för den som vill ta ordet, ta ton eller hitta på något annat spexigt!
           </br>
           </br>
-          Klädkod: Your fabulous self! 
+          Klädkod: <span class="icon" style="font-size: 1.2rem;">&#x2728;</span>  <b>Your fabulous self!</b><span class="icon" style="font-size: 1.2rem;">&#x2728;</span> 
           </br>
           Känn dig fin och bekväm, men om du vill har du här ett tillfälle att ta ut svängarna.          
           </br>
@@ -63,15 +69,19 @@
       <div class="info-card luxe">
         <div class="icon">🎉</div>
         <h2>Program</h2>
-        <list>
-          <li><strong>Fredag 6 mars</strong></li>
-          <li>Från kl 18.00: Eget boende och mat (för den som vill komma tidigt)</li>
-          <li><strong>Lördag 7 mars</strong></li>
-          <li>Från kl 12.00: Incheckning, korvgrillning och bastu</li>
-          <li>Från kl 15.00: Incheckning övriga</li>
+        <strong>Fredag 6 mars</strong>
+        <list style="margin-left: 7px;">
+          <li>Eget boende (för den som vill komma tidigt)</li>
+        </list>
+        <strong>Lördag 7 mars</strong>
+        <list style="margin-left: 7px;">
+          <li>Från kl 11.00: Incheckning</li>
+          <li>Ca. 11.30-13:00: Korvgrillning</li>
           <li>Kl 16.30: Fördrink</li>
           <li>Kl 18.00: Middag och fest</li>
-          <li><strong>Söndag 8 mars</strong></li>
+        </list>
+        <strong>Söndag 8 mars</strong>
+        <list style="margin-left: 7px;">
           <li>Frukost och utcheckning innan kl 11.00</li>
         </list>
 
@@ -93,9 +103,19 @@
 
   <div class="countdownText"><span class="days" id="daysLeft">—</span></div>
 
-  <footer class="p-footer">
-    <p>🎪 Förbered dig på skratt, glitter och magi! 🎪</p>
-  </footer>
+    <!-- <p>🎪 Förbered dig på skratt, glitter och magi! 🎪</p> -->
+    <footer class="p-footer">
+      <!-- Snödriva SVG -->
+      <svg class="snow-drift" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 60 C150 40 220 10 360 40 C480 68 560 40 680 50 C800 60 900 30 1000 50 C1100 72 1200 58 1200 58 L1200 120 L0 120 Z" fill="#ffffff"/>
+      </svg>
+
+      <!-- din befintliga footer-text -->
+      <!-- <div class="p-footer-content">
+        &copy; Ditt innehåll här
+      </div> -->
+    </footer>
+
 
 <script type="text/javascript" src="script/script-stylish.js"></script>
 

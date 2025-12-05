@@ -44,3 +44,49 @@
     const ms = nextMidnight - now;
     setTimeout(()=> { updateState(); scheduleDailyRefresh(); }, ms);
   })();
+
+  (function() {
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  function createStars(containerId, count, sizeRange, twinkleChance) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const frag = document.createDocumentFragment();
+
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement('span');
+      el.className = 'star';
+      // slumpmässig position i procent för responsivitet
+      const left = rand(0, 100);
+      const top = rand(0, 100);
+      // storlek i px
+      const size = Math.round(rand(sizeRange[0], sizeRange[1]));
+      el.style.left = left + '%';
+      el.style.top  = top + '%';
+      el.style.width  = size + 'px';
+      el.style.height = size + 'px';
+      // slumpmässig opacitet och blur för variation
+      el.style.opacity = (rand(0.45, 0.98)).toFixed(2);
+      if (Math.random() < twinkleChance) {
+        el.classList.add('twinkle');
+        // ge varje twinkle unik delay och duration
+        el.style.animationDelay = (rand(0, 4)).toFixed(2) + 's';
+        el.style.animationDuration = (rand(3.2, 5.5)).toFixed(2) + 's';
+      } else {
+        // små pulseringar för icke-twinkle, ge tiny flicker via transition
+        el.style.transition = 'opacity 8s linear';
+      }
+
+      // ge små variabler för transform jitter (kan användas senare för mer effekt)
+      frag.appendChild(el);
+    }
+    container.appendChild(frag);
+  }
+
+  // Anpassa antal/storlek här:
+  createStars('stars-back', 140, [1, 2.5], 0.06);   // många små
+  createStars('stars-front', 36, [2.2, 4.6], 0.28); // färre, större, fler blinkande
+
+  // valfri: lägg in en nedtonad gradient-overlay för att ge djup (om du vill)
+  // notera: läggs ovanpå .sky men under innehåll om du justerar z-index
+})();
