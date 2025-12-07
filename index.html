@@ -3,69 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Linnéas 40-årsfest – designval</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Om du senare vill ha en enklare, separat stil för startsidan kan du byta ut filen här -->
+  <title>Linnéa 40 år</title>
+  <link rel="stylesheet" href="css/style-stylish.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <p class="hero-overtitle">Inbjudan</p>
-      <h1>WIP</h1>
-      <p class="hero-subtitle">Välj vilket inbjudningsförslag du vill jobba vidare med</p>
+
+  <!-- STJÄRNHIMMEL (container skapar två lager) -->
+  <div class="sky" aria-hidden="true">
+    <div class="stars-layer back" id="stars-back"></div>
+    <div class="stars-layer front" id="stars-front"></div>
+  </div>
+
+
+  <div class="p-header">
+    <div class="p-header-text">
+      <p class="p-overtitle">INBJUDAN 40-årsfest</p>
+      <h1>7-8 mars</h1>
+      <p class="p-subtitle">
+        Till våren fyller jag 40 och det enda jag önskar mig är en riktigt härlig fest! 
+        Nu hoppas jag att ni vill vara med.
+        Festen kommer att äga rum på gulliga Solviken som ligger intill Sommen.
+        På Solviken finns bekvämt boende för alla gäster, mer info nedan.
+      </p>
+      <p class="p-subtitle">Hoppas du kan komma! /Linnéa</p>
     </div>
-  </header>
+    <div class="header-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841839.184627076!2d14.555770670509423!3d57.93421135508867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46598ed04f638d49%3A0xedb757450cf9b33c!2sSolviken%20vid%20Sommen!5e0!3m2!1ssv!2sse!4v1764336378869!5m2!1ssv!2sse" width="320" height="320" style="border:0; border-radius: 50%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 
-  <main class="alt-chooser">
-    <section>
-      <h2>Välj design</h2>
-      <p>Här kan du testa olika varianter av inbjudan innan du bestämmer dig.</p>
+  <div class="content">
+    <div class="info-grid">
+      <div class="info-card luxe">
+        <div class="icon">ℹ️</div>
+        <p>
+          Vi laddar för en riktig pangfest, men på vägen finns det lite praktisk info att ha koll på.
+          </br>
+          Festen håller till på Solviken i närheten av Tranås 7-8 mars.
 
-      <div class="alt-grid">
-        <!-- Alternativ 1 -->
-        <article class="alt-card">
-          <h3>Alternativ 1 – Klassisk inbjudan</h3>
-          <p>
-            Svart och guldig med glitter som rör sig långsamt i bakgrunden. 
-            En tydlig sida med festinfo, program, boende och OSA. </p>
-          <a class="button" href="classy.html">Öppna alternativ 1</a>
-        </article>
+          </br>
+          Festen drar igång kl 16:30 med en fördrink och sen blir det middag och dans!
+          För den som vill går det även att komma tidigare. Vi grillar på korv och sätter på bastun redan runt 12.00.
+          För den som åker lite längre går det även att komma redan på fredag kväll. 
+          </br>
+          </br>
 
-        <!-- Alternativ 2 -->
-        <article class="alt-card">
-          <h3>Alternativ 2 – Lekfull</h3>
-          <p>Lite mer skojig och med nedräkningsljus!</p>
-          <a class="button" href="playful.html">Öppna alternativ 2</a>
-        </article>
-
-        <!-- Alternativ 3 -->
-        <article class="alt-card">
-          <h3>Alternativ 3 – Stilig</h3>
-          <p>Vi testar lite mer clean!</p>
-          <a class="button" href="stylish.html">Öppna alternativ 2</a>
-        </article>
+          Vi bjuder på festen, men vi kommer att be er att stå för boende själva, vilket kommer att innebära 500 kr/person och natt.
+          </br>
+          Det kommer att finnas deltagande barn från släkten på plats, men i övrigt är det en vuxenfest. 
+          Festen är djurfri. 
+          </br>
+          </br>
+          Under middagen kommer det att finnas både tid och utrymme för den som vill ta ordet, ta ton eller hitta på något annat spexigt!
+          </br>
+          </br>
+          Klädkod: <span class="icon" style="font-size: 1.2rem;">&#x2728;</span>  <b>Your fabulous self!</b><span class="icon" style="font-size: 1.2rem;">&#x2728;</span> 
+          </br>
+          Känn dig fin och bekväm, men om du vill har du här ett tillfälle att ta ut svängarna.          
+          </br>
+          </br>
+          Mer info kommer längre fram!
+          </br>
+          </br>
+          OSA senast <b>15 februari</b> via formuläret nedan.
+          </br>
+          <small>
+            (ange gärna även om du vet att du inte kan komma)
+          </small>
+        </p>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>Experimentera lugnt – du behöver inte bestämma dig än 🎈</p>
-  </footer>
+      <div class="info-card luxe">
+        <div class="icon">🎉</div>
+        <h2>Program</h2>
+        <strong>Fredag 6 mars</strong>
+        <list style="margin-left: 7px;">
+          <li>Tidig ankomst (mer info om tid kommer)</li>
+        </list>
+        <strong>Lördag 7 mars</strong>
+        <list style="margin-left: 7px;">
+          <li>Från kl 11.00: Incheckning</li>
+          <li>Ca. 11.30-13:00: Korvgrillning</li>
+          <li>Kl 16.30: Fördrink</li>
+          <li>Kl 18.00: Middag och fest</li>
+        </list>
+        <strong>Söndag 8 mars</strong>
+        <list style="margin-left: 7px;">
+          <li>Frukost och utcheckning innan kl 11.00</li>
+        </list>
 
-  <script>
-    // Enkel fade-in som du redan hade
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+        <div class="icon">📍</div>
+        <h2>Plats</h2>
+        <p>Solviken vid Sommen, <a href="https://www.solviken.nu/kontakta-oss/vagbeskrivning/">Hitta hit</a></p>
+        <p>Solviken ligger ca 2 mil utanför Tranås intill sjön Sommen.</p>
+        <p>Adress: Solviken, 573 94 Ydre</p>
+      </div>
+    </div>
 
-    document.querySelectorAll('header.hero, main, footer').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-  </script>
+    <div id="osa" class="info-card luxe">
+      <div class="iframe-wrap">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4yZz6X_Tden0fkLvkqcxHpR0wbCxucK4AguP4gpgvykT_Xg/viewform?embedded=true"
+                title="OSA-formulär" frameborder="0" marginheight="0" marginwidth="0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="countdownText"><span class="days" id="daysLeft">—</span></div>
+
+    <!-- <p>🎪 Förbered dig på skratt, glitter och magi! 🎪</p> -->
+    <footer class="p-footer">
+      <!-- Snödriva SVG -->
+      <svg class="snow-drift" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 60 C150 40 220 10 360 40 C480 68 560 40 680 50 C800 60 900 30 1000 50 C1100 72 1200 58 1200 58 L1200 120 L0 120 Z" fill="#ffffff"/>
+      </svg>
+
+      <!-- din befintliga footer-text -->
+      <!-- <div class="p-footer-content">
+        &copy; Ditt innehåll här
+      </div> -->
+    </footer>
+
+
+<script type="text/javascript" src="script/script-stylish.js"></script>
+
 </body>
 </html>

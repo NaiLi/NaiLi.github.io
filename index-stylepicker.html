@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linnéas 40-årsfest – designval</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Om du senare vill ha en enklare, separat stil för startsidan kan du byta ut filen här -->
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-overtitle">Inbjudan</p>
+      <h1>WIP</h1>
+      <p class="hero-subtitle">Välj vilket inbjudningsförslag du vill jobba vidare med</p>
+    </div>
+  </header>
+
+  <main class="alt-chooser">
+    <section>
+      <h2>Välj design</h2>
+      <p>Här kan du testa olika varianter av inbjudan innan du bestämmer dig.</p>
+
+      <div class="alt-grid">
+        <!-- Alternativ 1 -->
+        <article class="alt-card">
+          <h3>Alternativ 1 – Klassisk inbjudan</h3>
+          <p>
+            Svart och guldig med glitter som rör sig långsamt i bakgrunden. 
+            En tydlig sida med festinfo, program, boende och OSA. </p>
+          <a class="button" href="classy.html">Öppna alternativ 1</a>
+        </article>
+
+        <!-- Alternativ 2 -->
+        <article class="alt-card">
+          <h3>Alternativ 2 – Lekfull</h3>
+          <p>Lite mer skojig och med nedräkningsljus!</p>
+          <a class="button" href="playful.html">Öppna alternativ 2</a>
+        </article>
+
+        <!-- Alternativ 3 -->
+        <article class="alt-card">
+          <h3>Alternativ 3 – Stilig</h3>
+          <p>Vi testar lite mer clean!</p>
+          <a class="button" href="stylish.html">Öppna alternativ 2</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Experimentera lugnt – du behöver inte bestämma dig än 🎈</p>
+  </footer>
+
+  <script>
+    // Enkel fade-in som du redan hade
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('header.hero, main, footer').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
