@@ -1,6 +1,6 @@
 
 //   const targetDate = "2026-03-07";
-  const targetDate = "2026-12-03";
+  const targetDate = "2026-03-07";
 
   /* Hitta dagens lokaldatum i Europe/Stockholm - men vi kan jämföra bara datum-delen i användarens lokala tid (webbläsarens). */
   function localDateString(dateObj){
