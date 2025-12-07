@@ -72,6 +72,13 @@ body {
   margin-bottom: 8px;
 }
 
+.countdownText {
+  position:absolute;
+  top:8px;
+  left: 8px;
+}
+
+
 /* === MAIN-INNEHÅLL === */
 
 .content {
@@ -183,6 +190,7 @@ body {
   line-height: 1.45;
 }
 
+
 /* OSA-formuläret ska ligga under korten på small screens */
 #osa {
   margin-top: 12px; /* kan justeras */
@@ -287,6 +295,7 @@ body {
 /* justering för mobil så snö inte täcker text */
 @media (max-width: 480px) {
   .p-footer .snow-drift { top: -46px; height: 60px; }
+  .p-header { margin: 0;}
 }
 
 
