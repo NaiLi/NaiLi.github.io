@@ -167,7 +167,7 @@ body {
 }
 
 .icon {
-  font-size: 38px;
+  font-size: 24px;
   opacity: 0.95;
 }
 
@@ -318,7 +318,7 @@ body {
 /* Små skärmar — finjusteringar */
 @media (max-width: 900px) {
   .content { padding: 16px; }
-  .icon { font-size: 26px; }
+  .icon { font-size: 16px; }
 }
 /* Mobil 
 @media (max-width: 680px) {
