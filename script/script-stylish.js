@@ -28,7 +28,7 @@
     if (diffDays > 0){
       daysLeftEl.textContent = diffDays + " dag" + (diffDays===1 ? "" : "ar") + " kvar! 🎂";
     } else if (diffDays === 0) {
-      daysLeftEl.textContent = "GRATTIS! Idag är din födelsedag 🎉";
+      daysLeftEl.textContent = "Idag smäller det! 🎉";
     } else {
       daysLeftEl.textContent = "Tack för att du firade med mig! 🎈";
     }
