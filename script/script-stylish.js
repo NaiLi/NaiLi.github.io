@@ -29,8 +29,7 @@
     // räkna skillnad i lokal datum: nollställ tid
     const t0 = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     const t1 = new Date(target.getFullYear(), target.getMonth(), target.getDate());
-    //const diffDays = Math.round((t1 - t0) / msPerDay);
-    const diffDays = -1; // testa efter
+    const diffDays = Math.round((t1 - t0) / msPerDay);
 
     if (diffDays > 0){
       daysLeftEl.textContent = diffDays + " dag" + (diffDays===1 ? "" : "ar") + " kvar! 🎂";
