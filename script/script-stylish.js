@@ -16,6 +16,12 @@
     const todayStr = localDateString(today);
 
     const daysLeftEl = document.getElementById('daysLeft');
+    //Före
+    const infor = document.getElementById('infor');
+    //Efter
+    const efter = document.getElementById('efter');
+    const subInfor = document.getElementById('sub-infor');
+    const subEfter = document.getElementById('sub-efter');
 
     const target = new Date(targetDate + "T00:00:00"); // tolka som midnatt lokal tid
     // räkna dagar (UTC-ignorant men bra för vanlig nedräkning)
@@ -27,10 +33,18 @@
 
     if (diffDays > 0){
       daysLeftEl.textContent = diffDays + " dag" + (diffDays===1 ? "" : "ar") + " kvar! 🎂";
+      efter.style.display = "none";
+      infor.style.display = "block";
     } else if (diffDays === 0) {
       daysLeftEl.textContent = "Idag smäller det! 🎉";
+      efter.style.display = "none";
+      infor.style.display = "block";
     } else {
       daysLeftEl.textContent = "Tack för att du firade med mig! 🎈";
+      infor.style.display = "none";
+      efter.style.display = "block";
+      subEfter.style.display = "block";
+      subInfor.style.display = "none";
     }
   }
 
